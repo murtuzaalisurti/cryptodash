@@ -1,31 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import Header from "../components/Header";
 import { DashWrapper } from "../styledComponents/DashboardElements";
 import LeftBar from "../components/LeftBar";
 import axios from "axios";
+
+export const contextOfCoin = createContext()
+
 const Dashboard = () => {
   const [coins, setCoins] = useState([]);
   const getCoins = async () => {
     let data = await axios.get("https://api.coingecko.com/api/v3/coins");
     console.log(data.data);
     setCoins(data.data);
-    // console.log(data.data[1].market_data.current_price.usd);
-    // console.log(new Date(data.data[1].last_updated));
-    // console.log(data.data[1].name);
-    // console.log(typeof coins);
-    // coins.map((coin) => console.log(coin));
-    // coins.forEach((e) => console.log(e));
-    // coins.filter((coin) => coin.name !== "bitcoin");
-    // console.log(data.data[1].)
+
   };
   useEffect(() => {
     getCoins();
   }, []);
 
-  // console.log(coins);
-  const getCoinObj = () => {
-    coins.forEach((coin) => console.log(coin));
-  };
+
+
   return (
     <DashWrapper>
       <Header title={"Dashboard"} />
@@ -51,6 +45,7 @@ const Dashboard = () => {
           })}
         </div>
       </div>
+    
     </DashWrapper>
   );
 };
