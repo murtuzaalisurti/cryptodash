@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const LeftBarWrapper = styled.div`
   width: 8vh;
-  /* background: blue; */
   height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
@@ -19,5 +18,5 @@ export const LeftBarWrapper = styled.div`
 export const Img = styled.img`
   height: 40px;
   width: 40px;
-  margin-block: 2rem;
+  margin-top: 2rem;
 `;

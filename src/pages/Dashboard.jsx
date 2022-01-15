@@ -32,25 +32,24 @@ const Dashboard = () => {
       <LeftBar />
       <div className="Center">
         <h1 className="Name">Hey, Person-1</h1>
-        {/* <button onClick={getCoins}>get Coins</button> */}
-        {coins.map((coin, id) => {
-          return (
-            <>
-              <div className="card" key={id}>
-                <div className="left">
-                  <h1>{coin.market_data.current_price.usd.toFixed(2)}</h1>
-                  <h4>{`${new Date(coin.last_updated).toLocaleString()}`}</h4>
+        <div className="cards">
+          {coins.map((coin, id) => {
+            return (
+              <>
+                <div className="card" key={id}>
+                  <div className="left">
+                    <h1>{coin.market_data.current_price.usd.toFixed(2)}</h1>
+                    <h4>{`${new Date(coin.last_updated).toLocaleString()}`}</h4>
+                  </div>
+                  <p>{coin.name}</p>
+                  <div className="right">
+                    <img src={coin.image.small} alt="" />
+                  </div>
                 </div>
-                <p>{coin.name}</p>
-                <div className="right">
-                  <img src={coin.image.small} alt="" />
-                </div>
-              </div>
-            </>
-          );
-        })}
-
-        <button onClick={getCoinObj}>get Coins</button>
+              </>
+            );
+          })}
+        </div>
       </div>
     </DashWrapper>
   );

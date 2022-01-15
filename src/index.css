@@ -4,7 +4,9 @@
   box-sizing: border-box;
   font-family: "Fira Mono", monospace;
 }
-
+body{
+  background-color: #04151F;
+}
 .input {
   width: 380px;
   background-color: #fff6d1;
