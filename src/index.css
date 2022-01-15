@@ -8,7 +8,7 @@ body{
   background-color: #04151F;
 }
 .input {
-  width: 380px;
+  width: 100%;
   background-color: #fff6d1;
   border: none;
   outline: none;
