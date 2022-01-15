@@ -32,7 +32,7 @@ const Dashboard = () => {
               <>
                 <div className="card" key={id}>
                   <div className="left">
-                    <h1>{coin.market_data.current_price.usd.toFixed(2)}</h1>
+                    <h1>$&nbsp;{coin.market_data.current_price.usd.toFixed(2)}</h1>
                     <h4>{`${new Date(coin.last_updated).toLocaleString()}`}</h4>
                   </div>
                   <p>{coin.name}</p>
